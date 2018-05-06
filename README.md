@@ -9,31 +9,19 @@ Screenshots:
 ![ScreenShot](http://hlpf.shrimantech.com/img/About_HLPF.png)
 
 ## Features
-1		My Events		Display the list of user's selected/scheduled Events
-
-2		Official Events		Display the list of HLPF's official events
-
-3		Special Events		Display the list of HLPF's special events
-
-4		Side Events		Display the list of HLPF's side events
-
-5		Exhibitions		Display the list of exhibitions details
-
-6		Panelists		Displays the list of panelists details
-
-7		Invite HLPF		Displays the list of Participants details
-
-8		Input		Displays HLPF's input from official website
-
-9		Blog		Displays HLPF's blog from official website
-
-10		News		Displays HLPF's input from Twitter Hashtag
-
-11		About HLPF		Displays official information about HLPF Events
-
-12		Search Events		User can able to search any HLPF events
-
-12		Notification		User receive notification from HLPF Event organizers
+  - My Events		Display the list of user's selected/scheduled Events
+  - Official Events		Display the list of HLPF's official events
+  - Special Events		Display the list of HLPF's special events
+  - Side Events		Display the list of HLPF's side events
+  - Exhibitions		Display the list of exhibitions details
+  - Panelists		Displays the list of panelists details
+  - Invite HLPF		Displays the list of Participants details
+  - Input		Displays HLPF's input from official website
+  - Blog		Displays HLPF's blog from official website
+  - News		Displays HLPF's input from Twitter Hashtag
+  - About HLPF		Displays official information about HLPF Events
+  - Search Events		User can able to search any HLPF events
+  - Notification		User receive notification from HLPF Event organizers
 
 
 ## Notifications:
