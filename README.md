@@ -27,6 +27,8 @@ Screenshots:
 
 ## Working Samples:
 	Please find the attached android apk file.
+	![Android](/build/android/hlpf.apk)
+	Android & iOS source codes will be forwarded to united nations official email ids.
 	
 ## Notifications:
 	Based on discussion with UN Team Members, new user credentials will be provided to the authorized UN members to send the notifications across all the app users.
