@@ -25,8 +25,12 @@ Screenshots:
   - Notification		User receive notification from HLPF Event organizers
 
 
+## Working Samples:
+	Please find the attached android apk file.
+	
 ## Notifications:
 	Based on discussion with UN Team Members, new user credentials will be provided to the authorized UN members to send the notifications across all the app users.
+	
 	Please contact us at support@shrimantech.com for further discussion
 
 ## Platform used for developments
