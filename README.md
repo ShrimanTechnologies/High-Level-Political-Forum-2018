@@ -26,8 +26,8 @@ Screenshots:
 
 
 ## Notifications:
-Based on discussion with UN Team Members, new user credentials will be provided to the authorized UN members to send the notifications across all the app users.
-Please contact us at support@shrimantech.com for further discussion
+	Based on discussion with UN Team Members, new user credentials will be provided to the authorized UN members to send the notifications across all the app users.
+	Please contact us at support@shrimantech.com for further discussion
 
 ## Platform used for developments
     Cordova 8.0.0
