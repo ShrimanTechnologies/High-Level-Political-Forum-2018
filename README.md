@@ -28,13 +28,8 @@ Manikandan Chellakani
 ## Working Samples:
 	Please find the attached android apk file.
 	
-  - [hlpf.apk](./build/android/hlpf.apk)
-  
-## Jar File & Sample In/Out Files
+  - [Android APK File](./build/android/hlpf.apk)
 
-Please refer the unit test files used for testing this program
-
-- Jar Files
 	Android & iOS source codes will be forwarded to united nations official email ids.
 	
 ## Notifications:
