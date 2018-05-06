@@ -5,8 +5,8 @@ The High-Level Political Forum on Sustainable Development (HLPF) is a conference
 #### Shriman Technologies Private Limited
 
 Screenshots:
-![](http://hlpf.shrimantech.com/img/Dashboard.png =100x20)
-![](http://hlpf.shrimantech.com/img/About_HLPF.png =40x60)
+![](http://hlpf.shrimantech.com/img/Dashboard.png){:height="50%" width="50%"}
+![](http://hlpf.shrimantech.com/img/About_HLPF.png){:height="700px" width="400px"}
 
 ## Features
   - My Events		Display the list of user's selected/scheduled Events
