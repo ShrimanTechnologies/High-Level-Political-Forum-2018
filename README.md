@@ -27,7 +27,7 @@ Manikandan Chellakani
 
 ## Working Samples:
 	Please find the attached android apk file.
-		- [Android](./build/android/)
+		- [Android](./build/android/hlpf.apk)
 
 	Android & iOS source codes will be forwarded to united nations official email ids.
 	
