@@ -2,10 +2,7 @@
 The High-Level Political Forum on Sustainable Development (HLPF) is a conference where United Nations Member States, UN entities and other major stakeholders discuss and work towards the realization of the 17 Sustainable Development Goals (SDGs) defined in the 2030 Agenda for Sustainable Development. The HLPF is the central UN platform for the follow-up and review of the 2030 Agenda.
 
 Developed By
-
 Manikandan Chellakani
-
-Shriman Technologies Private Limited
 
 ## Screenshots:
 ![](http://hlpf.shrimantech.com/img/HLPF-Img1.png)
@@ -30,7 +27,8 @@ Shriman Technologies Private Limited
 
 ## Working Samples:
 	Please find the attached android apk file.
-	![Android](/build/android/hlpf.apk)
+		- [Android](./build/android/)
+
 	Android & iOS source codes will be forwarded to united nations official email ids.
 	
 ## Notifications:
