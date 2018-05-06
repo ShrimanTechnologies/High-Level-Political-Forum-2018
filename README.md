@@ -7,7 +7,6 @@ Manikandan Chellakani
 ## Screenshots:
 ![](http://hlpf.shrimantech.com/img/HLPF-Img1.png)
 ![](http://hlpf.shrimantech.com/img/HLPF-Img2.png)
-![](http://hlpf.shrimantech.com/img/HLPF-Img3.png)
 
 ## Features
   - My Events		Display the list of user's selected/scheduled Events
