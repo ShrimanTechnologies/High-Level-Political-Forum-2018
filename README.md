@@ -9,7 +9,7 @@ Manikandan Chellakani
 ![](http://hlpf.shrimantech.com/img/HLPF-Img2.png)(https://www.youtube.com/watch?v=-_E-HnT4PZQ&t=8s)
 
 ## Demo Video
-[![High-Level Political Forum](http://hlpf.shrimantech.com/img/HLPF-Img1.png)](https://www.youtube.com/watch?v=-_E-HnT4PZQ&t=8s)
+[![High-Level Political Forum](https://img.youtube.com/vi/-_E-HnT4PZQ/0.jpg)](https://www.youtube.com/watch?v=-_E-HnT4PZQ&t=8s)
 
 
 ## Features
