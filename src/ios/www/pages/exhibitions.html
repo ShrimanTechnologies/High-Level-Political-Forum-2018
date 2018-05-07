@@ -1,0 +1,82 @@
+<template>
+  <div class="page" data-page="exihibitions" class="page navbar-through toolbar-through" >
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="back link">
+            <i class="icon icon-back"></i>
+            <span class="ios-only">Back</span>
+          </a>
+        </div>
+        <div class="title">Exihibitions</div>
+      </div>
+    </div>	
+	
+	
+	<div class="page-content">    
+
+    <div class="list media-list sortable">
+      <ul>
+	   {{#each exhibitions.details}}
+        <li>		
+          <div class="item-content">
+            <!-- <div class="item-media"><img src="./img/unlogo.png" width="80"/></div>-->
+			  {{#if title}}
+            <div class="item-inner">
+              <div class="item-title-row">				
+                <div class="item-title" style="white-space: normal;">{{title}}</div>
+              </div>
+			  {{#if location}}				
+              <div class="item-title-row">				
+                <div class="item-subtitle eventSubTitle">
+				    <i class="icon f7-icons ios-only exhibitionList">at</i>
+					<i class="icon material-icons md-only exhibitionList">room</i>
+					{{location}} 
+				</div>
+              </div>						
+			  {{/if}}
+			  {{#if time}}
+              <div class="item-title-row">				
+                <div class="item-subtitle eventSubTitle ">
+				    <i class="icon f7-icons ios-only exhibitionList">time_fill</i>
+					<i class="icon material-icons md-only exhibitionList">watch</i>
+					{{time}} 
+				</div>
+              </div>
+			  {{/if}}
+			  {{#if date}}
+              <div class="item-title-row">				
+                <div class="item-subtitle eventSubTitle">
+				    <i class="icon f7-icons ios-only">calendar</i>
+					<i class="icon material-icons md-only">event</i>
+					{{date}} 
+				</div>
+              </div>						
+
+			  {{/if}}
+			  {{#if shortDescr}}
+				<div class="item-text" style="white-space: normal;">{{shortDescr}}</div>
+			  {{/if}}
+			  {{#if descr}}
+				<div class="item-text" style="white-space: normal;">{{descr}}</div>
+			  {{/if}}
+            </div>
+		  {{/if}}
+
+          </div>
+          <div class="sortable-handler"></div>
+        </li>
+	  {{/each}}
+      </ul>
+    </div>
+  </div>
+  	
+  
+  </div>
+  
+
+  </div>
+</template>
+<script>
+  return {}
+</script>

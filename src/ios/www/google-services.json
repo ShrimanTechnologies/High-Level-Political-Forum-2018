@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "215252009366",
+    "firebase_url": "https://unhlpf-3fb52.firebaseio.com",
+    "project_id": "unhlpf-3fb52",
+    "storage_bucket": "unhlpf-3fb52.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215252009366:android:55673c59d1d42936",
+        "android_client_info": {
+          "package_name": "com.shrimaninc.hlpf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "215252009366-ah5p73pa3paqrhu7a3qgc4dcudprenqo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtelDfK11VsUhSJWCahYCdGKFQQ1tKdEA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

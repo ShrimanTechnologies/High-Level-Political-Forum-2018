@@ -1,0 +1,107 @@
+<template>
+  <div class="page" data-page="panelist" class="page navbar-through toolbar-through" >
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="back link">
+            <i class="icon icon-back"></i>
+            <span class="ios-only">Back</span>
+          </a>
+        </div>
+        <div class="title">Panelist Details </div>
+      </div>
+    </div>
+	<div class="page-content">	
+		
+		<div>
+            <div class="item-inner">
+              <div class="item-title-row">				
+				<div class="item-title" style="float:left;padding:10px;"><img src="{{panelistEvents.photo}}" width="44"/></div>
+                <div class="item-title" style="color: steelblue;font-size: 16px;font-weight: bold;padding: 10px;">{{panelistEvents.biographyTitle}} </div>				
+              </div>
+              <div class="item-title-row">				
+                <div class="item-subtitle eventSubTitle">
+					{{panelistEvents.biographySubTitle}} 
+				</div>
+              </div>
+            </div>
+		 </div> 
+		 
+		<div class="toolbar tabbar">
+			<div class="toolbar-inner">
+			    <a href="#panelistEvents" class="tab-link tab-link-active">
+					<i class="icon f7-icons ios-only">info_fill</i>
+					<i class="icon material-icons md-only">info</i>
+					<span class="EventTabTitle">Panelist Events</span>
+				</a>	
+			</div>
+		</div>
+		<div class="tabs-swipeable-wrap">
+		    <div class="tabs">
+				<div id="panelistEvents" class="page-content tab tab-active" style="padding-top: 0px;">
+					
+					<div class="tabs-swipeable-wrap">
+						<div class="tabs">
+								<div class="list media-list sortable" style="margin: 0px 0;">
+									<ul>
+									{{#each hlpfevents}}
+									{{#each eventDates}}					
+									{{#each events}}						
+										{{#js_if "( (@root.panelistEvents.eventIds).includes( this.eventId ) ) " }}
+										<li id="{{eventId}}">		
+										  <div class="item-content"  class="item-link">
+											<!-- <div class="item-media"><img src="./img/unlogo.png" width="80"/></div>-->
+											<div class="item-inner" >
+												<div class="item-title-row">										
+													<a href="/event/{{eventId}}/" >
+														<div class="item-title" style="white-space: normal;">{{eventTitle}}</div>
+													</a>	
+												</div>
+												<div class="item-title-row" >
+													<div style="width:20%;padding-top: 6px;text-align: -webkit-center;vertical-align: -webkit-baseline-middle;">
+														<div class="item-subtitle" >
+															<a class="addToMyEvent"  href="#" event="{{eventId}}" title="{{eventTitle}}" {{#js_if "((@root.myEventIDs).indexOf( this.eventId ) > -1) " }} style="display:none"   {{else}} style="display:block" {{/js_if}} >
+																<i class="icon f7-icons ios-only">add_round</i>
+																<i class="icon material-icons md-only">stars</i>
+															</a>
+															<a class="removeMyEvent"    href="#" event="{{eventId}}" title="{{eventTitle}}"  {{#js_if "((@root.myEventIDs).indexOf( this.eventId ) > -1) " }} style="display:block"   {{else}} style="display:none" {{/js_if}}   >
+																<i class="icon f7-icons ios-only">delete_round_fill</i>
+																<i class="icon material-icons md-only">delete</i>
+															</a>							
+														</div>
+																										
+														
+													</div>
+													<div style="width:80%">
+														<div class="item-subtitle"><a href="#" >{{time}}</a></div>
+														<div class="item-subtitle"><a href="#" >{{location}}</a></div>
+													</div>
+												</div>
+												<!-- <div class="item-subtitle">{{title1}}</div>
+												<div class="item-text">The 2030 Agenda for Sustainable Development, a plan of action for people, planet and prosperity, is presently in its early years of implementation. There are many positive signs - such as the widespread adoption into countries' own development plans and strategies, and the setting up of coordinating structures and mechanisms for implementation. At the same time, certain other indicators - for example lowered projections for economic growth, or long running patterns of inequality among many different dimensions - can be cause for concern. The current year's review at the HLPF, around the theme of “Eradicating poverty and promoting prosperity in a changing world”, is a timely occasion to take stock of the overall objectives of the Agenda, and to assess current status and trends, as well as emerging issues that have the potential to significantly affect achievement over the years to come.  Speakers at this session will bring their unique perspectives to bear on these issues, and indicate what they see as priorities needing urgent consideration.</div>
+												-->
+											</div>
+										</div>
+										<div class="sortable-handler"></div>
+										</li>
+										{{/js_if}}
+									{{/each}}
+									{{/each}}
+									{{/each}}
+									</ul>
+								</div>
+					</div>
+
+				</div>
+					
+					
+		    </div>
+		</div>			
+    </div>
+  
+
+  </div>
+</template>
+<script>
+  return {}
+</script>

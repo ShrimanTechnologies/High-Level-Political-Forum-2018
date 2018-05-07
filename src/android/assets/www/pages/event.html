@@ -1,0 +1,243 @@
+<template>
+
+
+  <div class="page" data-page="sideevents" class="page navbar-through toolbar-through" >
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="back link">
+            <i class="icon icon-back"></i>
+            <span class="ios-only">Back</span>
+          </a>
+        </div>
+        <div class="title">Event Details </div>
+		
+      </div>
+    </div>
+				
+	<div class="page-content">	
+	
+	{{#each hlpfevents}}
+	
+		{{#each eventDates}}
+		
+			{{#each events}}
+				{{#js_if "this.eventId === @root.myEventID"  }}  
+				
+		<div>
+            <div class="item-inner">
+              <div class="item-title-row">				
+                <div class="item-title" style="color: steelblue;font-size: 16px;font-weight: bold;padding: 10px;">{{eventTitle}} </div>				
+              </div>
+              <div class="item-title-row">				
+                <div class="item-subtitle eventSubTitle">
+				    <i class="icon f7-icons ios-only">calendar</i>
+					<i class="icon material-icons md-only">event</i>
+					{{date}} 
+					<div class="item-after" style="float: right;padding-right: 10%;">
+							<a class="addToMyEvent" id="addToMyEvent" href="#" event="{{eventId}}" title="{{eventTitle}}" {{#js_if "((@root.myEventIDs).indexOf( this.eventId ) > -1) " }} style="display:none"   {{else}} style="display:block" {{/js_if }} >
+								<i class="icon f7-icons ios-only">add_round</i>
+								<i class="icon material-icons md-only">stars</i>
+							</a>
+							<a class="removeMyEvent" id="removeMyEvent"  href="#" event="{{eventId}}" title="{{eventTitle}}"  {{#js_if "((@root.myEventIDs).indexOf( this.eventId ) > -1) " }} style="display:block"   {{else}} style="display:none" {{/js_if }}   >
+								<i class="icon f7-icons ios-only">delete_round_fill</i>
+								<i class="icon material-icons md-only">delete</i>
+							</a>							
+					</div>
+				</div>
+              </div>
+              <div class="item-title-row">				
+                <div class="item-subtitle eventSubTitle">
+				    <i class="icon f7-icons ios-only">time_fill</i>
+					<i class="icon material-icons md-only">watch</i>
+					{{time}} 
+				</div>
+              </div>
+              <div class="item-title-row">				
+				<div class="item-subtitle eventSubTitle">
+				    <i class="icon f7-icons ios-only">at</i>
+					<i class="icon material-icons md-only">room</i>
+					{{location}}
+					<div class="item-after" style="float: right;padding-right: 10%;">
+							<a class="shareEvent" id="addToMyEvent" href="#" event="{{eventId}}" title="{{eventTitle}}" data=" \nEvent Name: {{eventTitle}} \nTime: {{time}} \nDate: {{date}} \nLocation: {{location}} \n\nReference URL: ">
+								<i class="icon f7-icons ios-only">share_fill</i>
+								<i class="icon material-icons md-only">share</i>
+							</a>							
+					</div>
+				</div>
+                <div class="item-after"></div>
+              </div>
+              <!-- <div class="item-subtitle">{{title1}}</div>-- >
+              <div class="item-text">The 2030 Agenda for Sustainable Development, a plan of action for people, planet and prosperity, 
+			  is presently in its early years of implementation. </div>-->
+            </div>
+		 </div> 
+		 
+			<div class="toolbar tabbar">
+			    <div class="toolbar-inner">
+			        <a href="#about" class="tab-link tab-link-active">
+						<i class="icon f7-icons ios-only">info_fill</i>
+						<i class="icon material-icons md-only">info</i>
+						<span class="EventTabTitle">About</span>
+					</a>					
+			        <a href="#statement" class="tab-link">						
+						<i class="icon f7-icons ios-only">document_text_fill</i>
+						<i class="icon material-icons md-only">assignment</i>
+						<span class="EventTabTitle">Statements</span>
+					</a>
+			        <a href="#webcast" class="tab-link">
+						<i class="icon f7-icons ios-only">social_rss_fill</i>
+						<i class="icon material-icons md-only">cast_connected</i>
+						<span class="EventTabTitle">Webcast</span>
+					</a>					
+			        <a href="#biography" class="tab-link">
+						<i class="icon f7-icons ios-only">persons_fill</i>
+						<i class="icon material-icons md-only">person_outline</i>
+						<span class="EventTabTitle">BIOGRAPHIES</span>
+					</a>
+			    </div>
+			</div>
+			<div class="tabs-swipeable-wrap">
+			    <div class="tabs">
+
+					<div id="about" class="page-content tab tab-active" style="padding-top: 0px;">
+			          <div class="block" style="margin:12px;padding: 0px 7px;">
+						<p> {{descr}}</p>
+			          </div>
+			        </div>					
+
+			        <div id="statement" class="page-content tab" style="padding-top: 0px;">
+						{{#each statements}}
+						<div class="card">
+							<div class="card-content card-content-padding"><a href="{{statementLink}}" class="link external" type="application/pdf"  style="width:100%;height:100%" download>{{statementTitle}}</a> </div>
+						</div>		
+						{{/each}}
+			        </div>					
+					
+			        <div id="webcast" class="page-content tab" style="padding-top: 0px;">
+							{{#each webcasts}}
+							<div class="card demo-card-header-pic">
+								<div style="{{webcastLink}}" class="card-header align-items-flex-end">{{webcastTitle}}</div>
+								<div class="card-content card-content-padding">
+									<p>{{webcastTitle}}</p>
+								</div>
+							</div>
+							{{/each}}
+			        </div>					
+
+			        <div id="biography" class="page-content tab " style="padding-top: 0px;">
+							<div class="card">
+								<div class="card-content">
+									<div class="list media-list">
+									<ul>
+										{{#each biographies}}
+										<li class="item-content">
+											<div class="item-media"><img src="{{photo}}" width="44"/></div>
+											<div class="item-inner">
+												<div class="item-title-row">
+													<div class="item-title">{{biographyTitle}}</div>
+												</div>
+												<div class="item-subtitle" style="white-space: inherit;">{{biographySubTitle}}</div>
+											</div>
+										</li>
+										{{/each}}
+									</ul>
+									</div>
+								</div>
+							</div>
+			        </div>
+					
+			    </div>
+			</div>
+			
+			<!--
+            <div class="item-content">
+			</div>
+			-->
+				
+				<!--
+			<div class="toolbar tabbar">
+			    <div class="toolbar-inner">
+			        <a href="#biography" class="tab-link tab-link-active">Biographies</a>
+			        <a href="#participants" class="tab-link">Participants</a>
+			    </div>
+			</div>
+			
+			<div class="tabs-swipeable-wrap">
+			    <div class="tabs">
+				
+			        <div id="biography" class="page-content tab tab-active">
+						<div class="block">
+							<div class="card">
+								<div class="card-header">BIOGRAPHIES</div>
+								<div class="card-content">
+									<div class="list media-list">
+									<ul>
+										
+										<li class="item-content">
+											<div class="item-media"><img src="./img/unlogo.png" width="44"/></div>
+											<div class="item-inner">
+												<div class="item-title-row">
+													<div class="item-title">Mr. Robert Johnson</div>
+												</div>
+												<div class="item-subtitle" style="wrap:normal;">President of the Institute for New Economic Thinking</div>
+											</div>
+										</li>
+									</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+			        </div>
+			        <div id="participants" class="page-content tab tab-active">
+			          <div class="block">
+						<div class="block-title">Participants</div>
+						<div class="block block-strong">			
+							<div class="chip">
+								<div class="chip-media"><img src="./img/unlogo.png"/></div>
+								<div class="chip-label">Jane Doe</div>
+							</div>
+							<div class="chip">
+								<div class="chip-media"><img src="./img/unlogo.png"/></div>
+								<div class="chip-label">John Doe</div>
+							</div>
+							<div class="chip">
+								<div class="chip-media"><img src="./img/unlogo.png"/></div>
+								<div class="chip-label">Adam Smith</div>
+							</div>
+							<div class="chip">
+								<div class="chip-media bg-color-pink">J</div>
+								<div class="chip-label">Jennifer</div>
+							</div>
+							<div class="chip">
+								<div class="chip-media bg-color-yellow text-color-black">C</div>
+								<div class="chip-label">Chris</div>
+							</div>
+							<div class="chip">
+								<div class="chip-media bg-color-red">K</div>
+								<div class="chip-label">Kate</div>
+							</div>
+						</div>
+			          </div>
+			        </div>				
+			    </div>
+			</div>			
+			-->
+
+		
+				{{/js_if}}
+			{{/each}}					
+		{{/each}}					
+	{{/each}}	
+			
+    </div>
+  </div>
+
+  </div>
+  
+
+  </div>
+</template>
+<script>
+  return {}
+</script>

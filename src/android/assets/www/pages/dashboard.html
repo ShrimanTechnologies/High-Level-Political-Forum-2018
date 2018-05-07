@@ -1,0 +1,32 @@
+<template>
+  <div class="page">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="back link">
+            <i class="icon icon-back"></i>
+            <span class="ios-only">Back</span>
+          </a>
+        </div>
+        <div class="title">HLPF 2018 - Photos </div>
+      </div>
+    </div>	
+	
+    <div class="page-content">	
+        {{#each users.tabledata}}
+		<div class="card demo-card-header-pic">
+			<div style="background-image:url(http://lorempixel.com/1000/600/people/6/)" class="card-header align-items-flex-end">{{title1}}</div>
+			<!-- 	<div class="card-content card-content-padding">			
+			<p>{{title1}}</p> 
+			</div>-->
+			<div class="card-footer"><a href="#" class="link">Like</a><a href="#" class="link">Comment</a><a href="#" class="link">Share</a></div>
+		</div>
+	  {{/each}}
+		
+    </div>
+      
+  </div>
+</template>
+<script>
+  return {}
+</script>

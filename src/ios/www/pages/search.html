@@ -1,0 +1,132 @@
+<template>
+  <div class="page" data-page="search" data-name="search">
+
+
+  <div class="navbar">
+    <div class="navbar-inner">
+	  <div class="left">
+          <a href="#" class="back link">
+            <i class="icon icon-back"></i>
+            <span class="ios-only">Back</span>
+          </a>
+      </div>
+      <div class="title">Search Event</div>
+      <div class="subnavbar">
+        <!-- Searchbar with auto init -->
+        <form class="searchbar  searchbar-init" data-search-container=".search-here">
+          <div class="searchbar-inner">
+            <div class="searchbar-input-wrap">
+              <input type="search" placeholder="Search HLPF Event">
+              <i class="searchbar-icon"></i>
+              <span class="input-clear-button"></span>
+            </div>
+            <span class="searchbar-disable-button">Cancel</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="page-content">
+    <!-- Searchbar backdrop -->
+    <div class="searchbar-backdrop"></div>
+    <!-- hide-on-search element -- >
+    <div class="block searchbar-hide-on-search">
+      <p>Search your HLPF 2018 events here.</p>
+    </div>
+    <!-- search target list -->
+
+	<!--
+    <div class="list searchbar-found">
+      <ul>
+		{{#each hlpfevents.official}}
+			{{#each eventDates}}
+				{{#each events}}					
+					<li class="item-content">
+						<div class="item-inner">
+							<div class="item-title">{{eventTitle}}</div>
+						</div>
+					</li>
+				{{/each}}
+			{{/each}}
+		{{/each}}
+      </ul>
+    </div>
+	 -->
+	
+		{{#each hlpfevents}}
+			{{#each eventDates}}				
+				<div class="list media-list sortable" style="margin: 0px 0;">
+					<ul>
+					{{#each events}}
+						<li id="{{eventId}}">		
+							<div class="item-content"  class="item-link">
+								<!-- <div class="item-media"><img src="./img/unlogo.png" width="80"/></div>-->
+									<div class="item-inner" >
+										<div class="item-title-row">										
+											<a href="/event/{{eventId}}/" >
+												<div class="item-title" style="white-space: normal;">{{eventTitle}}</div>
+											</a>
+										</div>
+										<div class="item-title-row" >
+											<div style="width:20%;padding-top: 6px;text-align: -webkit-center;vertical-align: -webkit-baseline-middle;">
+												<div class="item-subtitle"><a href="#" >
+													<a class="addToMyEvent" href="#" event="{{eventId}}" title="{{eventTitle}}" {{#js_if "((@root.myEventIDs).indexOf( this.eventId ) > -1) " }} style="display:none"   {{else}} style="display:block" {{/js_if }} >
+														<i class="icon f7-icons ios-only">add_round</i>
+														<i class="icon material-icons md-only">stars</i>
+													</a>
+													<a class="removeMyEvent" href="#" event="{{eventId}}" title="{{eventTitle}}"  {{#js_if "((@root.myEventIDs).indexOf( this.eventId ) > -1) " }} style="display:block"   {{else}} style="display:none" {{/js_if }}   >
+														<i class="icon f7-icons ios-only">delete_round_fill</i>
+														<i class="icon material-icons md-only">delete</i>
+													</a>													
+												</div>
+											</div>
+											<div style="width:80%">
+												<div class="item-subtitle searchlist"><a href="#" >{{time}}</a></div>
+												<div class="item-subtitle searchlist"><a href="#" >{{location}}</a></div>
+											</div>
+										</div>										
+										<div class="item-title-row" >
+											<div style="width:50%">
+												<div class="item-subtitle searchlist"><a href="#" >{{date}}</a></div>
+											</div>
+											<div style="width:50%">
+												<div class="item-subtitle searchlist alignright"><a href="#" >{{eventType}}</a></div>
+											</div>
+										</div>
+
+										<!-- <div class="item-subtitle">{{title1}}</div>
+										<div class="item-text">The 2030 Agenda for Sustainable Development, a plan of action for people, planet and prosperity, is presently in its early years of implementation. There are many positive signs - such as the widespread adoption into countries' own development plans and strategies, and the setting up of coordinating structures and mechanisms for implementation. At the same time, certain other indicators - for example lowered projections for economic growth, or long running patterns of inequality among many different dimensions - can be cause for concern. The current year's review at the HLPF, around the theme of “Eradicating poverty and promoting prosperity in a changing world”, is a timely occasion to take stock of the overall objectives of the Agenda, and to assess current status and trends, as well as emerging issues that have the potential to significantly affect achievement over the years to come.  Speakers at this session will bring their unique perspectives to bear on these issues, and indicate what they see as priorities needing urgent consideration.</div>
+										-->
+									</div>
+								</div>
+							<div class="sortable-handler"></div>
+						</li>
+					{{/each}}
+					</ul>
+				</div>
+			{{/each}}
+		{{/each}}
+	
+    <!-- Nothing found message -->
+    <div class="block searchbar-not-found">
+      <div class="block-inner">Nothing found</div>
+    </div>
+
+
+		
+	
+	
+	
+	
+	
+  </div>
+</div>
+  
+  
+</template>
+<script>
+  //onMyFrameLoad();
+  return {
+	
+  }
+</script>

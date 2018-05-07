@@ -1,0 +1,49 @@
+<template>
+  <div class="page" data-page="inviteevents">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="back link">
+            <i class="icon icon-back"></i>
+            <span class="ios-only">Back</span>
+          </a>
+        </div>
+        <div class="title">Invite Events</div>
+      </div>
+    </div>	
+	
+	
+	<div class="page-content">
+    
+    <div class="list media-list sortable">
+      <ul>
+	   {{#each users.tabledata}}
+        <li>		
+          <div class="item-content">
+            <!-- <div class="item-media"><img src="./img/unlogo.png" width="80"/></div>-->
+            <div class="item-inner">
+              <div class="item-title-row">				
+                <div class="item-title"><a href="#" >{{title1}}</a></div>
+                <div class="item-after">$15</div>
+              </div>
+              <div class="item-title-row">				
+                <div class="item-subtitle"><a href="#" >9:00 AM - 10:30 AM</a></div>
+                <div class="item-after">Conference Room 4, UNHQ</div>
+              </div>
+              <!-- <div class="item-subtitle">{{title1}}</div>-->
+              <div class="item-text">The 2030 Agenda for Sustainable Development, a plan of action for people, planet and prosperity, is presently in its early years of implementation. There are many positive signs - such as the widespread adoption into countries' own development plans and strategies, and the setting up of coordinating structures and mechanisms for implementation. At the same time, certain other indicators - for example lowered projections for economic growth, or long running patterns of inequality among many different dimensions - can be cause for concern. The current year's review at the HLPF, around the theme of “Eradicating poverty and promoting prosperity in a changing world”, is a timely occasion to take stock of the overall objectives of the Agenda, and to assess current status and trends, as well as emerging issues that have the potential to significantly affect achievement over the years to come.  Speakers at this session will bring their unique perspectives to bear on these issues, and indicate what they see as priorities needing urgent consideration.</div>
+            </div>
+          </div>
+          <div class="sortable-handler"></div>
+        </li>
+	  {{/each}}
+      </ul>
+    </div>
+  </div>
+  
+      
+  </div>
+</template>
+<script>
+  return {}
+</script>

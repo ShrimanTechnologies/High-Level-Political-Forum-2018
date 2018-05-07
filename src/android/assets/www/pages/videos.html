@@ -1,0 +1,45 @@
+<template>
+  <div class="page" data-page="videos">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="back link">
+            <i class="icon icon-back"></i>
+            <span class="ios-only">Back</span>
+          </a>
+        </div>
+        <div class="title">HLPF 2018 - Videos </div>
+      </div>
+    </div>
+    <div class="page-content">	
+	
+	
+        {{#each users.tabledata}}
+		<div class="card demo-card-header-pic">
+			<iframe id="player" type="text/html" width="100%" class="lazy lazy-fade-in demo-lazy" src="https://www.youtube.com/embed/{{youtubeid}}" frameborder="0"></iframe>
+			<!-- <div class="card-content card-content-padding">			
+				<p>{{title1}}</p> <p>{{title1}}</p> 
+			</div> -->
+			<div class="card-content card-content-padding">			
+			
+				<div style="float:left; padding-right:10px;">
+					<!-- <iframe id="player" type="text/html" width="100%" class="lazy lazy-fade-in demo-lazy" src="https://www.youtube.com/embed/{{youtubeid}}" frameborder="0"></iframe> -->
+					 <img src="./img/unlogo.png" width="44"/> 
+				</div>
+				<div class="item-inner">
+					<div class="item-title-row">
+						<div class="item-title">{{title1}}</div>
+					</div>
+					<div class="item-subtitle" >{{title1}}</div>
+				</div>
+			</div>
+			<div class="card-footer" ><a href="#" class="link">Like</a><a href="#" class="link">Comment</a><a href="#" class="link">Share</a></div>
+		</div>
+	  {{/each}}
+		
+    </div>
+  </div>
+</template>
+<script>
+  return {}
+</script>

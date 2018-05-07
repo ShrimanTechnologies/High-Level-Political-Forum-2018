@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html id="myhtml">
+<head>
+  <meta charset="utf-8">
+  <!--
+  Customize this policy to fit your own app's needs. For more guidance, see:
+      https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+  Some notes:
+      * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+      * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+      * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+          * Enable inline JS: add 'unsafe-inline' to default-src
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#2196f3">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>HLPF 2018</title>
+
+  <link rel="stylesheet" href="css/framework7.min.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/app.css">
+  
+  <!-- Custom styles -->
+    <style>
+	
+	.searchlist a{
+	  font-size: 11px;
+	}
+
+	.alignright{
+	  text-align: right;
+	}
+	
+	/* Event List Page - Section */
+	.EventListSubTitle{
+		  font-size: 8px;
+	}
+	
+	.EventListTitle{
+	  	font-size: 11px;
+	  	text-align: center;
+	}
+		
+	/* Event Page - Section */
+	.EventTabTitle{
+	  	font-size: 8px;
+	}
+	.eventSubTitle{
+	    padding-left: 10px;
+	    padding-bottom: 7px;
+		color: cornflowerblue;
+		font-size: 12px;
+	}
+	
+	.eventSubTitle .icon{
+		font-size: 18px;
+		height: 18px;
+		padding-right: 8px;
+	}
+	
+	.exhibitionList{
+		font-size: 18px;
+		height: 18px;
+		padding-right: 8px;
+	}
+	.eventSubTitle .exhibitionList{
+		font-size: 18px;
+		height: 18px;
+		padding-right: 8px;
+	}
+	.ios .tabbar i.icon{
+		font-size: 22px;
+		height: 22px;
+	}
+	
+	/* Slider - Section */
+	
+.demo-swiper .swiper-slide {
+  font-size: 15px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  color: #000;
+}
+.demo-swiper .swiper-slide img{
+
+    width: -webkit-fill-available;
+}
+.demo-swiper .swiper-slide {
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+.demo-swiper {
+  margin: 0px 0 0px;
+  font-size: 18px;
+  height: 120px;
+}
+
+.notifications{
+	height:95px;
+}
+.notifications p{
+	font-size:10px;
+}
+.myeventshome{
+	font-size:20px;
+	background: #2196f3;
+}
+
+.demo-swiper.demo-swiper-auto .swiper-slide {
+  width: 85%;
+}
+.demo-swiper.demo-swiper-auto .swiper-slide:nth-child(2n) {
+  width: 70%;
+}
+.demo-swiper.demo-swiper-auto .swiper-slide:nth-child(3n) {
+  width: 30%;
+}
+
+	/* Home Page - Navigation Grid - Section */;	
+	.ios .row .col-50 {
+		width: 50%;
+	}
+	.ios .row .col-50 .icon{		
+		font-size:40px;
+	}
+	.ios .row .col-33 {
+		width: 33.3%;
+		white-space: nowrap;
+	}
+	.ios .row .col-33 .icon{	
+		width: 40px;
+		font-size:25px;
+	}
+	.ios .row .col-20 {
+		width: 20%;
+	}
+	.ios .row .col-80 {
+		width: 80%;
+		font-size:16px;
+		color:#FFFFFF;
+		text-align:left;
+	}
+	.ios .chip-media{
+		width: 8px;
+		height: 8px;
+	}
+	.ios .list .f7-icons{
+		font-size: 18px;
+		width: 19px;
+		height: 19px;
+	}
+	.ios .list .item-subtitle{
+		    font-size: 12px;
+	}
+	
+	.md .media-list .item-inner, .md li.media-item .item-inner{
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	
+	.md .row .col-50 {
+		width: 50%;
+	}
+	.md .row .col-50 .icon{		
+		font-size:40px;
+	}
+	.md .row .col-33 {
+		width: 33.3%;
+		white-space: nowrap;
+	}
+	.md .row .col-33 .icon{	
+		width: 40px;
+		font-size:40px;
+	} 	
+	.md .row .col-20 {
+		width: 20%;
+	}
+	.md .row .col-80 {
+		width: 80%;
+		font-size:16px;
+		color:#FFFFFF;
+		text-align:left;
+	}
+	.md .chip-media{
+		width: 8px;
+		height: 8px;
+	}
+	
+	.md .list .item-subtitle{
+		    font-size: 12px;
+	}
+	
+	.list .item-title{
+		 font-size: 13px;
+	}
+	
+div[class*="col"] {
+  text-align: center;
+  color: #000;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: -1px;
+  font-size: 12px;
+}
+
+	/* Tutorial - Section */;
+
+      .tutorialicon {
+        font-size: 250px;
+        line-height: 170px;
+      }
+
+      .tutorial-close-btn {
+        background: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        color: #0da6ec;
+      }
+
+      .welcomescreen-container .welcomescreen-text a{
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      .tutorial-close-btn {
+        background: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        color: #0da6ec !important;
+        text-decoration: none !important;
+      }
+
+      .page-content {
+        // padding: 20px;
+      }
+	  .panel{
+		display:block;
+	  }
+    </style>
+  
+</head>
+<body>
+  <div id="app" >
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar"></div>
+	
+	<div class="panel panel-left panel-cover" >
+      <div class="page" data-page="index" >
+        <div class="page-content">
+          <div class="block-title">
+				<div  style="float:left;">
+					<img src="./img/logo.png" style="width:30px;" />
+				</div>
+				<div style="    margin-top: 8px;font-size: 30px;">
+					HLPF 2018
+				</div>
+		  </div>
+          <div class="list links-list">
+            <ul>
+              <li>
+                <a href="/about/" class="panel-close">About HLPF</a>
+              </li>
+              <li>
+                <a href="/myevents/" class="panel-close">My Events</a>
+              </li>
+              <li>
+                <a href="/search/" class="panel-close">Search Events</a>
+              </li>
+              <li>
+                <a href="/exhibitions/" class="panel-close">Exhibitions</a>
+              </li>
+              <li>
+                <a href="/blog/" id="blogURL" class="panel-close">Blogs</a>
+              </li>
+              <li>
+                <a href="/input/" id="blogURL" class="panel-close">Input</a>
+              </li>
+              <li>
+                <a href="/news/" id="blogURL" class="panel-close">News</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main ios-edges">
+      <!-- Page, data-name contains page name which can be used in callbacks -->
+      <div class="page" data-name="home" data-page="home"  >
+	  
+        <!-- Top Navbar -->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="left">
+              <a href="#" class="link icon-only panel-open" data-panel="left">
+                <i class="icon f7-icons ios-only">menu</i>
+                <i class="icon material-icons md-only">menu</i>				
+              </a>
+            </div>
+            <div class="title sliding">HLPF 2018</div>
+			<!--
+            <div class="right">
+              <a href="#" class="link icon-only panel-open" data-panel="right">
+                <i class="icon f7-icons ios-only">bell_fill</i>
+                <i class="icon material-icons md-only">notifications</i>
+				<div id="notificationCount" style=" font-size: 10px; margin-bottom: 10px; margin-left: -5px;">12</div>
+              </a>
+            </div>
+			-->
+          </div>
+        </div>		
+
+		<div class="page-content" -->	
+
+		
+	
+	<div data-pagination='{"el": ".swiper-pagination"}' data-speed="1000" data-space-between="0" class="swiper-container swiper-init demo-swiper" >
+	<div class="swiper-pagination"></div>
+		<div class="swiper-wrapper">
+			<div class="swiper-slide"><img src="./img/slide-img.jpg"  /></div>
+			<div class="swiper-slide"><img src="./img/slide-img1.jpg"  /></div>
+			<div class="swiper-slide"><img src="./img/slide-img2.jpg" /></div>
+			<div class="swiper-slide"><img src="./img/slide-img3.jpg" /></div>
+			<div class="swiper-slide"><img src="./img/slide-img4.jpg" /></div>
+		</div>
+	</div>
+
+	
+	<div class="row pendingEvents">
+		<!-- Each "cell" has col-[widht in percents] class -->
+			<div class="col-20" >
+				<a href="/myevents/" class="col">
+					<i class="icon f7-icons ios-only">briefcase_fill</i>
+					<i class="icon material-icons md-only">business_center</i>				
+				</a>
+			</div>
+			<div class="col-80 myeventshome" >
+				<a href="/myevents/" class="col" style="color:#FFFFFF;">
+				<div class="left" id="myEventCountsDiv">My Events<div id="myEventCountsDivtest"></div></div>
+				</a>
+			</div>
+
+	</div>
+	
+	<div class="row">
+		<div class="col-33">
+			<a href="/officialevents/" class="col">
+				<i class="icon f7-icons ios-only">data_fill</i>
+                <i class="icon material-icons md-only">select_all</i>				
+				<br>Official Events
+			</a>
+		</div>
+		<div class="col-33">
+			<a href="/specialevents/" class="col">
+				<i class="icon f7-icons ios-only">bolt_round_fill</i>
+                <i class="icon material-icons md-only">location_city</i>				
+				<br>Special Events
+			</a>
+		</div>
+		<div class="col-33">
+			<a href="/sideevents/" class="col">
+				<i class="icon f7-icons ios-only">collection_fill</i>
+                <i class="icon material-icons md-only">view_carousel</i>				
+				<br>Side Events
+			</a>
+		</div>
+	</div>
+	
+	<div class="row">
+		<!-- Each "cell" has col-[widht in percents] class -->
+		<div class="col-33">
+			<a href="/exhibitions/" class="col">
+				<i class="icon f7-icons ios-only">calendar_fill</i>
+                <i class="icon material-icons md-only">business</i>				
+				<br>Exhibitions
+			</a>
+		</div>
+		<div class="col-33">
+			<a href="/panelists/" class="col">
+				<i class="icon f7-icons ios-only">persons_fill</i>
+                <i class="icon material-icons md-only">supervisor_account</i>				
+				<br>Panelists
+			</a>
+		</div>
+		<div class="col-33">
+			<a onClick="shareMe();" class="col">
+				<i class="icon f7-icons ios-only">share_fill</i>
+                <i class="icon material-icons md-only">screen_share</i>				
+				<br>Invite HLPF
+			</a>
+		</div>
+	</div>
+	
+	<div class="row">
+		<!-- Each "cell" has col-[widht in percents] class -->
+		<div class="col-33">
+			<a href="/input/" class="col">
+				<i class="icon f7-icons ios-only">play_round_fill</i>
+                <i class="icon material-icons md-only">video_library</i>				
+				<br>Input
+			</a>
+		</div>
+		<div class="col-33">
+			<a href="/blog/" class="col">
+				<i class="icon f7-icons ios-only">images_fill</i>
+                <i class="icon material-icons md-only">photo_library</i>				
+				<br>Blog
+			</a>
+		</div>
+		<div class="col-33">
+			<a href="/news/" class="col">
+				<i class="icon f7-icons ios-only">info_fill</i>
+                <i class="icon material-icons md-only">info</i>				
+				<br>News
+			</a>
+		</div>
+	</div>
+	
+	
+	<div data-speed="1000" data-pagination='{"el": ".swiper-pagination"}' data-space-between="0" class="swiper-container swiper-init demo-swiper notifications">
+	<div class="swiper-pagination"></div>
+		<div class="swiper-wrapper " >
+			<div class="swiper-slide">
+				<p>The meeting of the high-level political forum on sustainable development in 2017 convened under the auspices of the Economic and Social Council, was held from Monday, 10 July, to Wednesday, 19 July 2017; including the three-day ministerial meeting of the forum from Monday, 17 July, to Wednesday, 19 July 2017.</p>
+			</div>
+			<div class="swiper-slide">
+				<p>The theme was "Eradicating poverty and promoting prosperity in a changing world". The set of goals to be reviewed in depth was the following, including Goal 17. Strengthen the means of implementation and revitalize the Global Partnership for Sustainable Development, that will be considered each year:</p>
+			</div>
+			<div class="swiper-slide">
+				<p>In 2017, 43 countries have volunteered to present their national voluntary reviews to the HLPF. For more details, please click here.</p>
+			</div>
+		</div>
+	</div>
+		  
+        </div>
+      </div>
+
+    </div>
+
+			<p class="event waiting" style="display:none">Requesting Registration ID</p>
+            <p class="event received" style="display:none">Registered</p>
+            <p class="event received" style="display:none" id="RegisterationTextID">Requesting Registration ID</p>
+	 
+
+  <script>
+	if(localStorage.myEventCount!=0){
+		document.getElementById("myEventCountsDiv").innerHTML = 'My Events (' + localStorage.myEventCount + ')';
+	}
+  </script>
+  <script>
+  
+// this is the complete list of currently supported params you can pass to the plugin (all optional)
+var options = {
+  message: 'The meeting of the high-level political forum on sustainable development in 2018 convened under the auspices of the Economic and Social Council will be held from Monday, 9 July, to Wednesday, 18 July 2018; including the three-day ministerial meeting of the forum from Monday, 16 July, to Wednesday, 18 July 2018.  \n\nReference URL: ', // not supported on some apps (Facebook, Instagram)
+  subject: 'High-Level Political Forum 2018 - Invitation', // fi. for email
+  //files: ['', ''], // an array of filenames either locally or remotely
+  url: 'https://sustainabledevelopment.un.org/hlpf/2018',
+  chooserTitle: 'Pick an app' // Android only, you can override the default share sheet title,
+  //appPackageName: 'com.apple.social.facebook' // Android only, you can provide id of the App you want to share with
+};
+
+var onSuccess = function(result) {
+  console.log("Share completed? " + result.completed); // On Android apps mostly return false even while it's true
+  console.log("Shared to app: " + result.app); // On Android result.app since plugin version 5.4.0 this is no longer empty. On iOS it's empty when sharing is cancelled (result.completed=false)
+};
+
+var onError = function(msg) {
+  console.log("Sharing failed with message: " + msg);
+};
+
+function shareMe( e){
+	window.plugins.socialsharing.shareWithOptions(options, onSuccess, onError);
+}
+
+
+  
+  </script>
+  
+  <script type="text/javascript" src="http://hlpf.shrimantech.com/data.js"></script>
+  <script src="js/framework7.min.js"></script>
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <!-- App routes -->  
+  <script src="js/routes.js"></script>
+
+  <!-- Your custom app scripts -->
+  <script src="js/app.js"></script>  
+    
+    <script type="text/javascript" src="cordova.js"></script>	
+    <script type="text/javascript" src="js/index.js"></script>	
+    <script type="text/javascript">
+        app.initialize();
+    </script>  
+
+  
+  </div>
+      
+</body>
+</html>
